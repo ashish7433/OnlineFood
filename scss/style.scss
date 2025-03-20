@@ -1,0 +1,273 @@
+// Variables
+$primary-color: #ff6f61; // Primary theme color
+$secondary-color: #333; // Secondary text color
+$background-color: #f9f9f9; // Background color
+$white: #fff; // White color
+$black: #000; // Black color
+$border-color: #ddd; // Border color
+$font-family: 'Arial', sans-serif; // Default font family
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box-shadow {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+// Global Styles
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $secondary-color;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Header Styles
+header {
+  background-color: $white;
+  padding: 15px 0;
+  @include box-shadow;
+
+  .navbar-brand img {
+    max-width: 100px;
+  }
+
+  .navbar-nav {
+    margin-left: auto;
+
+    .nav-item {
+      margin-left: 20px;
+
+      .nav-link {
+        color: $secondary-color;
+        font-weight: bold;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+// Top Links
+.top-links {
+  background-color: $primary-color;
+  padding: 10px 0;
+  color: $white;
+
+  .links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include flex-center;
+
+    .link-item {
+      margin: 0 15px;
+      font-size: 16px;
+
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// Profile Section
+.profile {
+  background-color: $white;
+  padding: 20px;
+  margin-top: 20px;
+  @include box-shadow;
+
+  .profile-img {
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  .profile-desc {
+    h6 {
+      font-size: 24px;
+      margin: 0;
+      color: $primary-color;
+    }
+
+    p {
+      font-size: 16px;
+      color: $secondary-color;
+    }
+  }
+}
+
+// Cart Widget
+.widget-cart {
+  background-color: $white;
+  padding: 20px;
+  margin-top: 20px;
+  @include box-shadow;
+
+  .widget-heading {
+    h3 {
+      font-size: 20px;
+      color: $secondary-color;
+      margin-bottom: 15px;
+    }
+  }
+
+  .order-row {
+    margin-bottom: 15px;
+
+    .title-row {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+  }
+
+  .price-wrap {
+    text-align: center;
+    margin-top: 20px;
+
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 24px;
+      color: $primary-color;
+      margin: 10px 0;
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}
+
+// Menu Widget
+.menu-widget {
+  background-color: $white;
+  padding: 20px;
+  margin-top: 20px;
+  @include box-shadow;
+
+  .widget-heading {
+    h3 {
+      font-size: 20px;
+      color: $secondary-color;
+      margin-bottom: 15px;
+    }
+  }
+
+  .food-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .rest-logo img {
+      max-width: 100px;
+      border-radius: 10px;
+    }
+
+    .rest-descr {
+      h6 {
+        font-size: 18px;
+        margin: 0;
+        color: $primary-color;
+      }
+
+      p {
+        font-size: 14px;
+        color: $secondary-color;
+      }
+    }
+
+    .item-cart-info {
+      @include flex-center;
+      flex-direction: column;
+
+      .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: $primary-color;
+      }
+
+      input {
+        width: 50px;
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .btn {
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+// Footer Styles
+footer {
+  background-color: $secondary-color;
+  color: $white;
+  padding: 20px 0;
+  margin-top: 40px;
+
+  .payment-options,
+  .address,
+  .additional-info {
+    margin-bottom: 20px;
+
+    h5 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+     
+
+      li {
+        display: inline-block;
+        margin-right: 10px;
+
+        img {
+          max-width: 50px;
+        }
+      }
+    }
+  }
+}
